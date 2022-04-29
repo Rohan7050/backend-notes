@@ -1,0 +1,507 @@
+BSON
+---------------------------------------------------------------------------------------------
+
+https://www.interviewbit.com/node-js-interview-questions/
+https://expressjs.com/en/guide/using-middleware.html
+
+
+Framework                             vs.                           Library
+
+provides ready to usetools,                                 Provide external reusable funtion for our code
+standards, templates, and policies
+for fast application development
+                                                             we can controle in our code when and where to cal library
+the frame work controls callinhg of libraries for
+our code
+                                                              Facilitates program binding
+                                                               helps ous to reuse software function
+
+easy to create and deploy application
+
+helps to develop fast application quickly
+
+
+framework reduce the complexity of softer development process
+ 
+
+
+What are the different Node JS frameworks?
+Node. js frameworks are mainly of three types — MVC, Full-Stack MVC, and REST API frameworks
+Node.js partial.js, sails.js, express.js
+Express. js: It is a fast, robust and asynchronous Model-View-Controller framework for Node
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Require:- with the help of require we are able to require external dependencies, like const express = require("express") so we have to require express 
+dependencies which is external resorce.
+--------------------------------------------------------------------
+
+ LTS or current:-
+​ LTS stands for Long Term Support and the recommended version for most users. Nodejs org makes new versions frequently with new features, bug fixes, 
+and performance optimizations.
+ As a general rule, we can safely assume that the latest version is always the best version to use
+
+------------------------------------------------------
+
+What is callback hell in node JS?
+Callback hell in Node. js is the situation in which we have complex nested callbacks and unreadable.
+Nesting of function (function under function )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is promise?
+ Promise is a placeholder for a value that will be available in the future,
+
+
+
+Are promises asynchronous?
+A Promise is a JavaScript object that links producing code and consuming code.
+A promise is used to handle the asynchronous result of an operation. JavaScript is designed to not wait for an asynchronous block of code to completely 
+execute before other synchronous parts of the code can run. With Promises, we can defer the execution of a code block until an async request is completed.
+
+
+
+
+Why are promises better than callbacks?
+
+They can handle multiple asynchronous operations easily and provide better error handling than callbacks and events. In other words also, we may say that, promises are the ideal 
+choice for handling multiple callbacks at the same time, thus avoiding the undesired callback hell situation
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Module.exports:- actually module.exports are the intruction which tells nodejs to export function,objects,string ,so other files are allowed to access the exported code.
+
+----------------------------------------------------------------------------------
+
+package.json:- package.json holds a metadata about a particular projects
+
+----------------------------------------------------------------------
+how many types of API:- 
+1)  Asynchronous non-blocking function
+2)  synchrous, blocking function
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ SQL                                         vs                                        NoSQL   
+
+it ia relational database management                                              Distributed database management  system
+system
+
+vertically scalable                                                               Horizontal  Scalable
+
+                                                                                   Dynamic Schema
+Fixed or predefined schema
+
+Not sutable for hirarchical data storage                                           Best sutable for hirarchical data storage
+
+Can be used for complex queries                                                    Not good for complex queries
+
+schema is rigid                                                                    schema flexible
+
+
+
+
+
+
+MongoDB:-mongo db is database collection work with node js, it is a no-sql ,cross-platform ,document oriented database that provide high performance,high scalability.
+it store data in the form of BSON
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Authentication and Authorization:-
+To authenticate a user, a client application must send a JSON Web Token (JWT), in the authorization header of the HTTP request to your backend API
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is the difference between authentication and authorization?
+Simply put, authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, 
+and data a user has access to (authorization is the combination of who some one and what specific applications, files, and data a user can access)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FORM DATA:-This chapter is about sending HTML forms: with or without files.in in other words FormData objects are used to capture HTML form and submit it using fetch 
+or another network method.The special thing about FormData is that network methods, such as fetch, can accept a FormData object as a body. It’s encoded 
+and sent out with Content-Type: multipart/form-data.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+What is multer used for?
+Multer is a node. js middleware for handling multipart/form-data , which is primarily used for uploading files.
+and it wrape fiels in array
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CORS:- “CORS” stands for Cross-Origin Resource Sharing. It allows you to make requests from one website to another website in the browser.It allows us to relax the security
+ applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FORMDATA METHODS:-
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+We can modify fields in FormData with methods:
+
+formData.append(name, value) – add a form field with the given name and value,
+
+formData.append(name, blob, fileName) – add a field as if it were <input type="file">, the third argument fileName sets file name (not form field name), 
+as it were a name of the file in user’s filesystem,
+
+formData.delete(name) – remove the field with the given name,
+
+formData.get(name) – get the value of the field with the given name,
+
+formData.has(name) – if there exists a field with the given name, returns true, otherwise false
+
+A form is technically allowed to have many fields with the same name, so multiple calls to append add more same-named fields.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXPRESS:-The primary use of Express is to provide server-side logic for web and mobile applications also  It is useful for building web apps quickly on NodeJS
+It can be used both on the client-side and server-side ||  without useing a express you have to write your own code like you need to write routing componenyts.
+and with the help of express we can write our API easily, route component,and http methods like get,post,put,and etc.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+MONGOOSE:-it is just like a framework of mongodb and help us to make connection between mongodb and node js and provide schema validation
+NOTE:- Mongoose models and their schemas allow you to perform validation on the fields you expect in your project/code or are required.
+Mongoose Schema is Stateless, 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BODYPARSER:- with the help of bodyparser we are able to change our json format into body parse to read easily.
+Body Parser is a middleware of Node JS used to handle HTTP POST request. Body Parser can parse string based client request body into JavaScript Object which we can use in our application
+bodyParser. json returns middleware that only parses json. This parser accepts any Unicode encoding of the body and supports automatic inflation of gzip and deflate encodings. 
+A new body object containing the parsed data is populated on the request object after the middleware (i.e. req. body)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ROUTERS:- Express router is a class which helps us to create router handlers
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How many types of HTTP request:- GET,PUT,POST,DELETE
+                                 GET:- with the help of get we can read out data in a response body
+                                 PUT:- with the help of put we can update a data
+                                 POST:- with the help of post we can create a data
+                                 DELETE:- we can delete a data 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ASYNC:- it return the promises so we can fetch out data in a web application.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWAIT:- await wait a response jo async hame promises provide karvata he ||  ye response ke aane tak ka wait krta he 
+Note: The purpose of async / await is to simplify the syntax necessary to consume promise-based APIs
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TRY & CATCH:- with the help of try and catch we have a power to access ha error handlers with some status code
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NOTE:- we also use a RETURN keyword because we want to stope the execution of function on that point.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FIND:-  The find() method uses a query document that you provide to match the subset of the documents in the collection that match the query.
+
+FINDONE:- it is just like a find but it returns only one document,even idf there are more ,it iss useful when searching by properties that you have declared as unique.
+
+FINDBYID:- with the help of findbyid we are able to find a unique value that we given in model
+
+FINDONEANDUPDATE:_The findOneAndUpdate() method updates the first matched document in the collection that matches the selection criteria.
+
+UPDATEONE:-the use case of updateOne is when you don't need the document and want to save a bit of time and bandwidth
+
+difference  between FINDONEANDUPDATE & UPDATEONE:-findOneAndUpdate returns a document whereas updateOne does not (it just returns the _id if it has created a new document)
+insert-:
+upsert:-
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JWT:- JSON Web Token, is an open standard used to share security information between two parties — a client and a server and it is a combination of header ,payload,and cryptographic 
+signature. when we will login at any page so there is a token key generated automatically behind the process and it store in a coockies.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+MIDDLEWARE:-Middleware functions are functions that have access to the request object ( req ), the response object ( res ), and the next middleware function in the application's 
+request-response cycle.update and modify the request and the response object. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+pass by value:-In Pass by value, parameters passed as an arguments create its own copy. So any changes made inside the function is made to the copied value not to the original value .
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+pass by referance:- In Pass by Reference, Function is called by directly passing the reference/address of the variable as an argument. So changing the value inside the function also 
+change the original value. In JavaScript array and Object follows pass by reference property.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+clouser methods:- with the help of clouser methods we can define function inside the function and inner function have ability to access variable and perameter of parent function. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HIGH ORDER FUNCTION:-function which accept another function as an arguements in a function.like map methods 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+what is API?
+An API (Application Programming Interface) is a set of functions that allows applications to access data and interact with external software components, operating systems,
+ or microservices
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is jason?
+JSON (JavaScript Object Notation) is a lightweight data-interchange format. ... JSON is basically a collection of name/value pairs,
+ where the name will always be a string and values can be a string (in double quotes), 
+a number, a boolean (true or false), null, an object, or an array.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is map mathod?
+with the help of map mathod we can create a new array and call a function in a every element
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is the difference between path params and queryparam?
+URI parameter (Path Param) is basically used to identify a specific resource or resources whereas Query Parameter is used to sort/filter those resources.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is the difference between model and schema?
+A Mongoose schema defines the structure of the document, default values, validators, etc., whereas a Mongoose model provides an interface to the database for creating, 
+querying, updating, deleting records.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+aggrigiation:-In MongoDB, aggregation operations process the data records/documents and return computed results. It collects values from various documents and groups
+them together and then performs different types of operations on that grouped data like sum, average, minimum, maximum, etc to return a computed result
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+shallow copy:-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Deep copy:-
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+mutablle:-Mutable is a type of variable that can be changed. In JavaScript, only objects and arrays are mutable, not primitive values. The objects in which you can change the fields and
+ states after the object is created are known as Mutable objects.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+immuatble:-  Immutables are the objects whose state cannot be changed once the object is created. Strings and Numbers are Immutable
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Why do we need immutability?
+The immutability concept is mainly use from functional and object-oriented programming. Whenever we want to make changes to some data (for example to an object or an array)
+ we should get a new object back with the updated data instead of directly modifying the original one.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+caching server side:- it a temporairly memory that we can store our data and  we are bale to get a most frequently data in a cache and the most important thing that it reduse our
+access time
+
+DISADVANTAGE OF CACHING:- when we update a data just for example change the image but the response body gives a previous data not updated.
+
+NOTE:- But with the help of redis we able to get a updated data when we  create a global storage and this global storage contains a 2 mechanism which is (WRITE THROUTH AND WRITE BACK)
+so whe we update the data in db so automatically change in redis storage.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CACHE HIT :- when data present in a cache memory 
+CACHE MISS :- when the data is not present in memory
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Redis:-Redis, which stands for Remote Dictionary Server,Redis is commonly used as a cache to store frequently accessed data in memory so that applications can be responsive to users.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+why we use REDIS:-Redis is a great choice for implementing a highly available in-memory cache to decrease data access latency, increase throughput, and ease the load off your relational 
+or NoSQL database and application. and it is allso based on command types.. and in the redis we have a data in the form of kye value pair and our value allways be  in a string form.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UTIL:-The node. js "util" module provides some functions to print formatted strings as well as some 'utility' functions that are helpful for debugging purposes.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PROMISIFY:- promisify() method defines in utilities module of Node. js standard library. It is basically used to convert a method that returns responses using a callback function 
+to return responses in a promise object.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The types of middleware include database middleware, application server middleware, message-oriented middleware, transaction-processing monitors and Web middleware.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Regex:-Short for regular expression, a regex is a string of text that allows you to create patterns that help match, locate, and manage text.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+difference between save and create
+Save can be used to both create a new Record and update a existing record . Whereas create is used to create a new record by providing all required field at one time .
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+For Node.js why google uses a V8 engine:-
+ goole uses V8 as it is a chrome runtime engine that converts javascript code into native machine code it speed up the app..
+ execution and response process
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is assert in node JS?
+Definition and Usage. The assert module provides a way of testing expressions. If the expression evaluates to 0, or false, an assertion failure is being caused, 
+and the program is terminated. This module was built to be used internally by Node. js.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain streams in Node.JS:-
+1)Readable
+2)Writable
+3)Duplex
+4)transform
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are the 4 types of NoSQL databases?
+Here are the four main types of NoSQL databases:
+1)Document databases.
+2)Key-value stores.
+3)Column-oriented databases.
+4)Graph databases.
+
+--------------------------------------------------------------------------------------------------------------
+
+explicite:-
+implicite:-
+
+
+
+ntroduction to Javascript Engines
+
+Browser	Name of                    Javascript Engine
+Google Chrome	                   V8
+Edge (Internet Explorer)	   Chakra
+Mozilla Firefox	                   Spider Monkey
+Safari	                           Javascript Core Webkit
+
+
+
+
+*********************************MIDDLEWARE********************************************* 
+PLEASE VISIT THIS SITE VERY IMPORTENT IN TERMS OF MIDDLEWARE
+https://expressjs.com/en/guide/using-middleware.html
+
+
+Express is a routing and middleware web framework that has minimal functionality of its own: An
+ Express application is essentially a series of middleware function calls.
+
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function
+ in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+
+Middleware functions can perform the following tasks:
+
+Execute any code.
+Make changes to the request and the response objects.
+End the request-response cycle.
+Call the next middleware function in the stack.
+If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function.
+ Otherwise, the request will be left hanging.
+
+
+An Express application can use the following types of middleware:
+
+1 ==> Application-level middleware.
+2 ==>Router-level middleware.
+3==>Error-handling middleware.
+4==>Built-in middleware.
+5==>Third-party middleware.
+
+
+
+ 1==>   Application-level middleware
+
+Bind application-level middleware to an instance of the app object by using the app.use() and
+ app.METHOD() functions, where METHOD is the HTTP method of the request that the middleware function handles (such as GET, PUT, or POST) in lowercase.
+
+This example shows a middleware function with no mount path. The function is executed every time the app receives a request.
+
+const express = require('express')
+const app = express()
+
+app.use((req, res, next) => {
+  console.log('Time:', Date.now())
+  next()
+})
+
+
+
+
+ 2==> Router-level middleware
+
+Router-level middleware works in the same way as application-level middleware, except it is bound to an instance of express.Router().
+
+const router = express.Router()
+Load router-level middleware by using the router.use() and router.METHOD() functions.
+
+The following example code replicates the middleware system that is shown above for application-level middleware, by using router-level middleware:
+
+const express = require('express')
+const app = express()
+const router = express.Router()
+
+// a middleware function with no mount path. This code is executed for every request to the router
+router.use((req, res, next) => {
+  console.log('Time:', Date.now())
+  next()
+})
+
+// a middleware sub-stack shows request info for any type of HTTP request to the /user/:id path
+router.use('/user/:id', (req, res, next) => {
+  console.log('Request URL:', req.originalUrl)
+  next()
+}, (req, res, next) => {
+  console.log('Request Type:', req.method)
+  next()
+})
+
+// a middleware sub-stack that handles GET requests to the /user/:id path
+router.get('/user/:id', (req, res, next) => {
+  // if the user ID is 0, skip to the next router
+  if (req.params.id === '0') next('route')
+  // otherwise pass control to the next middleware function in this stack
+  else next()
+}, (req, res, next) => {
+  // render a regular page
+  res.render('regular')
+})
+
+// handler for the /user/:id path, which renders a special page
+router.get('/user/:id', (req, res, next) => {
+  console.log(req.params.id)
+  res.render('special')
+})
+
+// mount the router on the app
+app.use('/', router)
+
+
+3===> Error-handling middleware
+
+Error-handling middleware always takes four arguments. You must provide four arguments to identify it as an error-handling middleware function. Even if you don’t need to use the next object, you must specify it to maintain the signature. Otherwise, the next object will be interpreted as regular middleware and will fail to handle errors.
+
+Define error-handling middleware functions in the same way as other middleware functions, except with four arguments instead of three, specifically with the signature (err, req, res, next)):
+
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
